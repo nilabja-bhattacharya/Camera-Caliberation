@@ -29,13 +29,7 @@ The extrinsic parameters consist of a rotation, R, and a translation, t. The ori
 ![calibration_rt_coordinates.png](image/calibration_rt_coordinates.png)
 
 ##### Intrinsic Parameters
-The intrinsic parameters include the focal length, the optical center, also known as the principal point, and the skew coefficient. The camera intrinsic matrix, K, is defined as:
-'''math
-\begin{equation}
-K = 
-\left(\begin{array}{cc} fx & 0 & u0\\ 0 & fy & v0\\ 0 & 0 & 1 \end{array}\right)
-\end{equation}
-'''
+The intrinsic parameters include the focal length, the optical center, also known as the principal point, and the skew coefficient. 
 
 #### Distortion in Camera Calibration
 The camera matrix does not account for lens distortion because an ideal pinhole camera does not have a lens. To accurately represent a real camera, the camera model includes the radial and tangential lens distortion.
@@ -44,10 +38,3 @@ The camera matrix does not account for lens distortion because an ideal pinhole 
 Radial distortion occurs when light rays bend more near the edges of a lens than they do at its optical center. The smaller the lens, the greater the distortion.
 ![calibration_radial_distortion.png](image/calibration_radial_distortion.png)
 
-The radial distortion coefficients model this type of distortion. The corrected points are denoted as:
-'''math
-xcorrected = x(1 + k1*r2 + k2*r4 + k3*r6)
-'''
-'''math
-ycorrrected = y(1 + k1*r2 + k2*r4 + k3*r6)
-'''
