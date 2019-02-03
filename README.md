@@ -12,7 +12,7 @@ Camera parameters include intrinsics, extrinsics, and distortion coefficients. T
 
 #### Pinhole Camera Model
 A pinhole camera is a simple camera without a lens and with a single small aperture. Light rays pass through the aperture and project an inverted image on the opposite side of the camera. Think of the virtual image plane as being in front of the camera and containing the upright image of the scene.
-![image/camera_calibration_focal_point.png](attachment:camera_calibration_focal_point.png)
+![camera_calibration_focal_point.png](image/camera_calibration_focal_point.png)
 
 The pinhole camera parameters are represented in a 4-by-3 matrix called the camera matrix. This matrix maps the 3-D world scene into the image plane. The calibration algorithm calculates the camera matrix using the extrinsic and intrinsic parameters. The extrinsic parameters represent the location of the camera in the 3-D scene. The intrinsic parameters represent the optical center and focal length of the camera.
 ![calibration_camera_matrix.png](attachment:calibration_camera_matrix.png)
