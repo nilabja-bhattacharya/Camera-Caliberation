@@ -12,20 +12,25 @@ Camera parameters include intrinsics, extrinsics, and distortion coefficients. T
 
 #### Pinhole Camera Model
 A pinhole camera is a simple camera without a lens and with a single small aperture. Light rays pass through the aperture and project an inverted image on the opposite side of the camera. Think of the virtual image plane as being in front of the camera and containing the upright image of the scene.
+
 ![camera_calibration_focal_point.png](image/camera_calibration_focal_point.png)
 
 The pinhole camera parameters are represented in a 4-by-3 matrix called the camera matrix. This matrix maps the 3-D world scene into the image plane. The calibration algorithm calculates the camera matrix using the extrinsic and intrinsic parameters. The extrinsic parameters represent the location of the camera in the 3-D scene. The intrinsic parameters represent the optical center and focal length of the camera.
+
 ![calibration_camera_matrix.png](image/calibration_camera_matrix.png)
 
 The world points are transformed to camera coordinates using the extrinsics parameters. The camera coordinates are mapped into the image plane using the intrinsics parameters.
+
 ![calibration_cameramodel_coords.png](image/calibration_cameramodel_coords.png)
 
 #### Camera Calibration Parameters
 The calibration algorithm calculates the camera matrix using the extrinsic and intrinsic parameters. The extrinsic parameters represent a rigid transformation from 3-D world coordinate system to the 3-D camera’s coordinate system. The intrinsic parameters represent a projective transformation from the 3-D camera’s coordinates into the 2-D image coordinates.
+
 ![image/calibration_coordinate_blocks.png](image/calibration_coordinate_blocks.png)
 
 ##### Extrinsic Parameters
 The extrinsic parameters consist of a rotation, R, and a translation, t. The origin of the camera’s coordinate system is at its optical center and its x- and y-axis define the image plane.
+
 ![calibration_rt_coordinates.png](image/calibration_rt_coordinates.png)
 
 ##### Intrinsic Parameters
@@ -36,7 +41,6 @@ The camera matrix does not account for lens distortion because an ideal pinhole 
 
 ##### Radial Distortion
 Radial distortion occurs when light rays bend more near the edges of a lens than they do at its optical center. The smaller the lens, the greater the distortion.
-
 
 ![calibration_radial_distortion.png](image/calibration_radial_distortion.png)
 
