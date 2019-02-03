@@ -22,7 +22,7 @@ The world points are transformed to camera coordinates using the extrinsics para
 
 #### Camera Calibration Parameters
 The calibration algorithm calculates the camera matrix using the extrinsic and intrinsic parameters. The extrinsic parameters represent a rigid transformation from 3-D world coordinate system to the 3-D camera’s coordinate system. The intrinsic parameters represent a projective transformation from the 3-D camera’s coordinates into the 2-D image coordinates.
-![calibration_coordinate_blocks.png](attachment:calibration_coordinate_blocks.png)
+![image/calibration_coordinate_blocks.png](attachment:calibration_coordinate_blocks.png)
 
 ##### Extrinsic Parameters
 The extrinsic parameters consist of a rotation, R, and a translation, t. The origin of the camera’s coordinate system is at its optical center and its x- and y-axis define the image plane.
