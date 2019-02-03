@@ -36,5 +36,7 @@ The camera matrix does not account for lens distortion because an ideal pinhole 
 
 ##### Radial Distortion
 Radial distortion occurs when light rays bend more near the edges of a lens than they do at its optical center. The smaller the lens, the greater the distortion.
+
+
 ![calibration_radial_distortion.png](image/calibration_radial_distortion.png)
 
